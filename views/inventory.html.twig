@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Inventory</title>
+</head>
+<body>
+    <h1>Inventories</h1>
+
+    {% if inventory is not empty %}
+        <p>Here is your inventory:</p>
+        <ul>
+            {% for object in inventory %}
+                <li>{{ object.getName }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action='/postInventory' method='post'>
+        <label for='name'>Inventory name</label>
+        <input id='name' name='name' type='text'>
+
+        <button type='submit'>Add Inventory</button>
+    </form>
+    <form action='/delete_inventory' method='post'>
+        <button type='submit'>Clear</button>
+    </form>
+
+    <p><a href='/'>Home</a></p>
+</body>
+</html>

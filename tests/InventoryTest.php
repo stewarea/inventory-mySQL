@@ -117,5 +117,23 @@
             //Assert
             $this->assertEquals($test_Inventory, $result);
         }
+        function test_find_name()
+        {
+            //Arrange
+            $name = "Gray";
+            $name2 = "Pink";
+            $quantity = 4;
+            $quantity2 = 3;
+            $test_Inventory = new Inventory($name, $quantity);
+            $test_Inventory->save();
+            $test_Inventory2 = new Inventory($name2, $quantity2);
+            $test_Inventory2->save();
+
+            //Act
+            $result = Inventory::find($test_Inventory->getName());
+
+            //Assert
+            $this->assertEquals($test_Inventory, $result);
+        }
     }
  ?>

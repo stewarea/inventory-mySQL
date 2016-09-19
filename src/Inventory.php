@@ -66,6 +66,19 @@
             }
             return $found_inventory;
         }
+        // static function find($search_name)
+        // {
+        //     $found_inventory = null;
+        //     $inventories = Inventory::getAll();
+        //     foreach($inventories as $inventory) {
+        //         $inventory_name = $inventory->getName();
+        //         if ($inventory_name == $search_name) {
+        //           $found_inventory = $inventory;
+        //         }
+        //     }
+        //     return $found_inventory;
+        // }
+
 
 
 
